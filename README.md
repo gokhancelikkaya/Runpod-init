@@ -9,4 +9,7 @@ I will provide initialisation scripts for various tasks in this repo. <br />
 place the link to the startup script in the indicated field <br />
 <br /><br />
 Environment Variables > Provisioning Script <br />
+[https://github.com/MushroomFleet/Runpod-init/blob/main/DJZ-init/default.sh](https://github.com/MushroomFleet/Runpod-init/blob/main/DJZ-init/default.sh) <br />
+Above is the first work in progress script, which adds Flux Dev support, my Flux Lora's, the DJZ-Nodes pack & some custom nodes required to run my workflows. <br />
+Workflows should also be added when this project is finished.
 
