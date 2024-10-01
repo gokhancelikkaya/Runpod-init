@@ -41,6 +41,10 @@ NODES=(
 	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
 )
 
+WORKFLOWS=(
+	"https://github.com/MushroomFleet/DJZ-Workflows"
+)
+
 CHECKPOINT_MODELS=(
 	#"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
 	#"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
@@ -217,6 +221,19 @@ function provisioning_get_nodes() {
             git clone "${repo}" "${path}" --recursive
             if [[ -e $requirements ]]; then
                 pip_install -r "${requirements}"
+            fi
+        fi
+    done
+}
+
+function provisioning_get_workflows() {
+    for repo in "${WORKFLOWS[@]}"; do
+        dir="${repo##*/}"
+        path="/opt/ComfyUI/user/default/workflows/${dir}"
+        if [[ -d $path ]]; then
+            if [[ ${AUTO_UPDATE,,} != "false" ]]; then
+                printf "Updating workflows: %s...\n" "${repo}"
+                ( cd "$path" && git pull )
             fi
         fi
     done
