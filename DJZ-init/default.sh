@@ -22,6 +22,23 @@ NODES=(
 	"https://github.com/ltdrdata/ComfyUI-Manager"
 	"https://github.com/cubiq/ComfyUI_essentials"
 	"https://github.com/MushroomFleet/DJZ-Nodes"
+	"https://github.com/Gourieff/comfyui-reactor-node"
+	"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+	"https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
+	"https://github.com/rgthree/rgthree-comfy"
+	"https://github.com/crystian/ComfyUI-Crystools"
+	"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+	"https://github.com/giriss/comfy-image-saver"
+	"https://github.com/Fannovel16/comfyui_controlnet_aux"
+	"https://github.com/WASasquatch/was-node-suite-comfyui"
+	"https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
+	"https://github.com/melMass/comfy_mtb"
+	"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
+	"https://github.com/sipherxyz/comfyui-art-venture"
+	"https://github.com/twri/sdxl_prompt_styler"
+	"https://github.com/hylarucoder/comfyui-copilot"
+	"https://github.com/kijai/ComfyUI-KJNodes"
+	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
 )
 
 CHECKPOINT_MODELS=(
@@ -59,8 +76,11 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
+	"https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-hed-controlnet-v3.safetensors"
+	"https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-canny-controlnet-v3.safetensors"
+	"https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-depth-controlnet-v3.safetensors"
     #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors"
-    #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors?download"
+    #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors"
     #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_openpose.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors"
