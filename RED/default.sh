@@ -96,7 +96,7 @@ LORA_MODELS=(
 	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/cybersocietyV4-000001.safetensors"
 	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/cybersocietyV55-000007.safetensors"
 	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/cybersocietyV6-000001.safetensors"
-	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/cybersocietyV66-000005%20(2).safetensors"
+	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/cybersocietyV66-e5.safetensors"
 	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/ducreux-8-16-e8-10.safetensors"
 	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/notthetrueworldV5-e1.safetensors"
 	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/oldgodsV11_r1-e9-06.safetensors"
