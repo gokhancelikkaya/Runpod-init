@@ -9,7 +9,7 @@ OneTrainer WIP (stable): [https://runpod.io/console/deploy?template=c150zcigz7&r
 
 ## Acknowledgements
 
- - [Docker Author: AI-Dock](https://github.com/ai-dock)
+ - [Base Image Author: AI-Dock](https://github.com/ai-dock)
  - [The Project we are using](https://github.com/ai-dock/comfyui)
  - [Template built on this Release](https://github.com/ai-dock/comfyui/pkgs/container/comfyui/279832227?tag=latest-cuda)
 
