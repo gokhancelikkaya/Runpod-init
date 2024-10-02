@@ -238,13 +238,16 @@ function provisioning_get_nodes() {
 
 function provisioning_get_workflows() {
     for repo in "${WORKFLOWS[@]}"; do
-        dir="${repo##*/}"
+        dir=$(basename "$repo" .git)
         path="/opt/ComfyUI/user/default/workflows/${dir}"
-        if [[ -d $path ]]; then
+        if [[ -d "$path" ]]; then
             if [[ ${AUTO_UPDATE,,} != "false" ]]; then
                 printf "Updating workflows: %s...\n" "${repo}"
                 ( cd "$path" && git pull )
             fi
+        else
+            printf "Cloning workflows: %s...\n" "${repo}"
+            git clone "$repo" "$path"
         fi
     done
 }
