@@ -6,7 +6,7 @@
 
 # Packages are installed after nodes so we can fix them...
 
-#DEFAULT_WORKFLOW="https://..."
+DEFAULT_WORKFLOW="https://raw.githubusercontent.com/ai-dock/comfyui/main/config/workflows/flux-comfyui-example.json"
 
 APT_PACKAGES=(
     #"package-1"
@@ -53,7 +53,7 @@ CHECKPOINT_MODELS=(
 )
 
 UNET_MODELS=(
-	"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/flux1-dev.sft"
+	#"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/flux1-dev.sft"
 )
 
 CLIP_MODELS=(
@@ -96,7 +96,7 @@ LORA_MODELS=(
 	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/cybersocietyV4-000001.safetensors"
 	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/cybersocietyV55-000007.safetensors"
 	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/cybersocietyV6-000001.safetensors"
-	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/cybersocietyV66-000005%20(2).safetensors"
+	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/cybersocietyV66-e5.safetensors"
 	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/ducreux-8-16-e8-10.safetensors"
 	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/notthetrueworldV5-e1.safetensors"
 	"https://huggingface.co/mushroomfleet/Flux-Lora-Collection/resolve/main/oldgodsV11_r1-e9-06.safetensors"
@@ -110,7 +110,7 @@ LORA_MODELS=(
 )
 
 VAE_MODELS=(
-    "https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/ae.sft"
+    #"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/ae.sft"
     #"https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
 )
 
@@ -155,6 +155,15 @@ function provisioning_start() {
     source /opt/ai-dock/etc/environment.sh
     source /opt/ai-dock/bin/venv-set.sh comfyui
 
+    if provisioning_has_valid_hf_token; then
+        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors")
+        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors")
+    else
+        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors")
+        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors")
+        sed -i 's/flux1-dev\.safetensors/flux1-schnell.safetensors/g' /opt/ComfyUI/web/scripts/defaultGraph.js
+    fi
+
     provisioning_print_header
     provisioning_get_apt_packages
     provisioning_get_nodes
@@ -180,6 +189,7 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_workflows
     provisioning_print_end
 }
 
@@ -228,13 +238,16 @@ function provisioning_get_nodes() {
 
 function provisioning_get_workflows() {
     for repo in "${WORKFLOWS[@]}"; do
-        dir="${repo##*/}"
+        dir=$(basename "$repo" .git)
         path="/opt/ComfyUI/user/default/workflows/${dir}"
-        if [[ -d $path ]]; then
+        if [[ -d "$path" ]]; then
             if [[ ${AUTO_UPDATE,,} != "false" ]]; then
                 printf "Updating workflows: %s...\n" "${repo}"
                 ( cd "$path" && git pull )
             fi
+        else
+            printf "Cloning workflows: %s...\n" "${repo}"
+            git clone "$repo" "$path"
         fi
     done
 }
