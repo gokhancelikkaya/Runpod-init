@@ -2,9 +2,9 @@
 <br />
 Making use of Runpod easier and less painful for some, maybe.<br />
 <br />
-ComfyUI WIP (stable): [https://runpod.io/console/deploy?template=25hd4rhmj7&ref=0czffee4](https://runpod.io/console/deploy?template=25hd4rhmj7&ref=0czffee4)<br />
-KohyaSS WIP (stable): [https://runpod.io/console/deploy?template=gdu4jus5ud&ref=0czffee4](https://runpod.io/console/deploy?template=gdu4jus5ud&ref=0czffee4)<br />
-OneTrainer WIP (stable): [https://runpod.io/console/deploy?template=c150zcigz7&ref=0czffee4](https://runpod.io/console/deploy?template=c150zcigz7&ref=0czffee4)<br />
+ComfyUI WIP (stable): [https://runpod.io/console/deploy?template=25hd4rhmj7&ref=0czffee4]<br />
+KohyaSS WIP (stable): [https://runpod.io/console/deploy?template=gdu4jus5ud&ref=0czffee4]<br />
+OneTrainer WIP (stable): [https://runpod.io/console/deploy?template=c150zcigz7&ref=0czffee4]<br />
 <br /><br />
 
 ## Acknowledgements
