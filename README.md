@@ -18,7 +18,7 @@ OneTrainer WIP (stable): [https://runpod.io/console/deploy?template=c150zcigz7&r
 
 To deploy this project run my template in Runpod, <br />
 you can search for it with "DJZ" and find it in the list. <br />
-Assign a GPU & your Netowrk Storage, then start it up. <br />
+Assign a GPU & your Network Storage, then start it up. <br />
 Some pods take a long time to install everything, <br />
 this is normal, so keep an eye on the logs.<br />
 <br />
