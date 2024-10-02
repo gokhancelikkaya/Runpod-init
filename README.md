@@ -2,6 +2,9 @@
 <br /><br />
 currently using: <br />
 ghcr.io/ai-dock/comfyui:latest <br />
+
+WIP (stable): https://www.runpod.io/console/explore/25hd4rhmj7
+
 <br /><br />
 ![image](https://github.com/user-attachments/assets/d2aa2164-e651-4bc9-9f22-d1723b20acb7) <br />
 <br /><br />
