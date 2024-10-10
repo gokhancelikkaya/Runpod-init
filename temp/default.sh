@@ -77,6 +77,18 @@ ESRGAN_MODELS=(
     #"https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
 )
 
+INSIGHTFACE_MODELS=(
+    "https://github.com/facefusion/facefusion-assets/releases/download/models/inswapper_128.onnx"
+)
+
+ULTRALYTICS_MODELS=(
+    "https://huggingface.co/Bingsu/adetailer/resolve/main/face_yolov8m.pt"
+)
+
+SAMS_MODELS=(
+    "https://huggingface.co/datasets/Gourieff/ReActor/resolve/main/models/detection/bbox/face_yolov8m.pt"
+)
+
 CONTROLNET_MODELS=(
 	"https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-hed-controlnet-v3.safetensors"
 	"https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-canny-controlnet-v3.safetensors"
@@ -146,6 +158,15 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/insightface" \
+        "${INSIGHTFACE_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/ultralytics/bbox" \
+        "${ULTRALYTICS_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/sams" \
+        "${SAMS_MODELS[@]}"
     provisioning_get_workflows
     provisioning_print_end
 }
