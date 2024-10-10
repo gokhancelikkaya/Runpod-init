@@ -36,6 +36,9 @@ NODES=(
 	"https://github.com/sipherxyz/comfyui-art-venture"
 	"https://github.com/twri/sdxl_prompt_styler"
 	"https://github.com/kijai/ComfyUI-KJNodes"
+    "https://github.com/kijai/ComfyUI-Florence2"
+    "https://github.com/kijai/ComfyUI-segment-anything-2"
+    "https://github.com/un-seen/comfyui-tensorops"
 
 )
 
