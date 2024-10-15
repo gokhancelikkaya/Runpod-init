@@ -86,7 +86,7 @@ ULTRALYTICS_MODELS=(
 )
 
 SAMS_MODELS=(
-    "https://huggingface.co/datasets/Gourieff/ReActor/resolve/main/models/detection/bbox/face_yolov8m.pt"
+    "https://huggingface.co/datasets/Gourieff/ReActor/blob/main/models/sams/sam_vit_b_01ec64.pth"
 )
 
 CONTROLNET_MODELS=(
