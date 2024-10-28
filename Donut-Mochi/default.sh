@@ -40,6 +40,9 @@ NODES=(
 	"https://github.com/kijai/ComfyUI-KJNodes"
 	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
     "https://github.com/kijai/ComfyUI-MochiWrapper"
+    "https://github.com/city96/ComfyUI_ExtraModels"
+    "https://github.com/chflame163/ComfyUI_LayerStyle"
+    "https://github.com/CosmicLaca/ComfyUI_Primere_Nodes"
 )
 
 WORKFLOWS=(
