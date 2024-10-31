@@ -137,7 +137,7 @@ function provisioning_start() {
         "${UNET_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/diffusion_models/mochi" \
-        "${MOCHI[@]}"
+        "${MOCHI_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/clip" \
         "${CLIP_MODELS[@]}"
