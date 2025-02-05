@@ -46,6 +46,10 @@ WORKFLOWS=(
 )
 
 CHECKPOINT_MODELS=(
+    "https://huggingface.co/strangerzonehf/Flux-Super-Realism-LoRA/resolve/main/super-realism.safetensors"
+    "https://civitai.com/api/download/models/765095?type=Model&format=SafeTensor&size=full&fp=fp8&token=${CIVIT_TOKEN}"
+    "https://civitai.com/api/download/models/1319700?type=Model&format=SafeTensor&size=full&fp=bf16&token=${CIVIT_TOKEN}"
+    "https://civitai.com/api/download/models/1031531?type=Model&format=SafeTensor&size=full&fp=fp8&token=${CIVIT_TOKEN}"
 	#"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
 	#"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
 	#"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
@@ -53,7 +57,7 @@ CHECKPOINT_MODELS=(
 )
 
 UNET_MODELS=(
-	#"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/flux1-dev.sft"
+	"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/flux1-dev.sft"
 )
 
 CLIP_MODELS=(
@@ -110,7 +114,7 @@ LORA_MODELS=(
 )
 
 VAE_MODELS=(
-    #"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/ae.sft"
+    "https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/ae.sft"
     #"https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
 )
 
